@@ -8,7 +8,6 @@ class markov:
     reguli = ""
 
     def __init__(self, cuvant):
-        self.vocabular = "aba"
         self.cuvant = cuvant
         with open(
             "C:\\Users\\bogda\\Desktop\\TEME LFC\\algoritm Markov\\vocabular.txt", "r"
