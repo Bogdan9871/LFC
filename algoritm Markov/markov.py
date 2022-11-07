@@ -66,7 +66,9 @@ class markov:
 
 
 def startAlgorithm():
+
     m = markov(input("Type the word: "))
+    print("Vocabularul curent: " + m.vocabular)
     if m.validate() == True:
         m.derivareMarkov()
     else:
