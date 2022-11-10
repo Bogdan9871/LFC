@@ -1,1 +1,1 @@
-bool((x for x in self.vn if x in self.vt))
+tartAlgorithm()

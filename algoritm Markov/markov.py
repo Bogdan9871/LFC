@@ -30,34 +30,34 @@ class markov:
             return False
 
     def derivareMarkov(self):
-        regulaDeCautat = []
-        regulaDeModificat = []
+        regulaStanga = []
+        regulaDreapta = []
         index = 0
         for regula in self.reguli:
-            regulaDeModificat.append(
+            regulaDreapta.append(
                 re.findall("[^->]+\Z", regula)
             )  # Creare lista cu elemente de modificat
 
-            regulaDeCautat.append(
+            regulaStanga.append(
                 re.findall("^[^->]+", regula)
             )  ##Creare lista cu elemente de cautat
-        regulaDeModificat = [
-            s for S in regulaDeModificat for s in S
+        regulaDreapta = [
+            s for S in regulaDreapta for s in S
         ]  # convertire in lista simpla
-        regulaDeCautat = [
-            s for S in regulaDeCautat for s in S
+        regulaStanga = [
+            s for S in regulaStanga for s in S
         ]  # convertire in lista simpla
         while True:
-            if self.cuvant.find(regulaDeCautat[index]) != -1:
+            if self.cuvant.find(regulaStanga[index]) != -1:
                 self.cuvant = self.cuvant.replace(
-                    regulaDeCautat[index], regulaDeModificat[index], 1
+                    regulaStanga[index], regulaDreapta[index], 1
                 )  # first occurance
                 index = 0
             else:
                 index += 1
             if index == 3:
                 break
-            for regula in regulaDeCautat:
+            for regula in regulaStanga:
                 if self.cuvant.find(regula) == -1:
                     break
             time.sleep(1)

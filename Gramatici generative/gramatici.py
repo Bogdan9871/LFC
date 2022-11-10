@@ -47,7 +47,9 @@ class gramatica:  # G=(VN, VT,S,P)
 
     def print(self):
         print("G=(", self.vn, self.vt, self.simbolStart, ",P)")
-        print("P= ", self.productie)
+        print("P= ")
+        for ind in range(len(self.productie)):
+            print("(", ind, ")", self.productie[ind])
 
     def verificare(self):
 
