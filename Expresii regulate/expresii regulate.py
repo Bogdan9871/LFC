@@ -17,6 +17,22 @@ def firstExercise():
     # 3. 4p - Se dă o parolă. Să se verifice dacă aceasta este strong sau nu. O parolă este strong
 
 
+def secondExercise():
+    cuvinte = open(
+        "C:\\Users\\bogda\\Desktop\\TEME LFC\\Expresii regulate\\cuvinte.txt", "r"
+    ).read()
+    parCounter = int()
+    cuvinteList = []
+    for word in cuvinte.split():
+        cuvinteList.append(word)
+    for word in cuvinteList:
+        for char in word:
+            if char == "a":
+                parCounter += 1
+
+    print(cuvinteList, parCounter)
+
+
 def thirdExercise():
     parola = input("Introducet parola: ")
 
@@ -32,22 +48,24 @@ def thirdExercise():
 
             print("Password is Strong")
         else:
-            print("Pasword is not strong")
+            print("Pasword is not strong.")
+            thirdExercise()
 
     verificarePassword(parola)
 
 
-while True:
-    if (
-        input(
-            "Select option: \n"
-            + "1. Check if number is integer or double \n"
-            + "3.Check if password is strong \n"
-        )
-        == "1"
-    ):
-        firstExercise()
-    else:
-        thirdExercise()
-    if input("Select another option? (1-yes,0-no): ") != "1":
-        break
+# while True:
+#     if (
+#         input(
+#             "Select option: \n"
+#             + "1. Check if number is integer or double \n"
+#             + "3.Check if password is strong \n"
+#         )
+#         == "1"
+#     ):
+#         firstExercise()
+#     else:
+#         thirdExercise()
+#     if input("Select another option? (1-yes,0-no): ") != "1":
+#         break
+secondExercise()

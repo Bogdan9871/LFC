@@ -61,6 +61,10 @@ class gramatica:  # G=(VN, VT,S,P)
             print("A doua conditie este indeplinita")
         else:
             print("A doua conditie nu este indeplinita")
+        if all(ch in self.vn for ch in self.productieStanga):
+            print("A treia conditie este indeplinita")
+        else:
+            print("A treia conditie nu este indeplinita")
         if ("S" in self.productieStanga) == True:
             print("A patra condtie este indeplinita")
         else:

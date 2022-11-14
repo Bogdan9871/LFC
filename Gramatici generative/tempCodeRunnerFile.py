@@ -1,1 +1,1 @@
-tartAlgorithm()
+a
