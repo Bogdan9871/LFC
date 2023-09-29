@@ -1,1 +1,1 @@
-A
+Algoritmi Limbaje formale si compilatoare
